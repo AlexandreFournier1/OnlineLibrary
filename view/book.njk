@@ -1,0 +1,25 @@
+{% extends "catalogue.njk" %}
+
+{% block content %}
+    {% for livre in livres %}
+        <div class="book-item" id="div{{ loop.index }}">
+            <a 
+                href="/descriptionLivre/{{ livre.id }}"
+                onclick='sauvegarderLivreDansLocalStorage({ 
+                    id: "{{ livre.id }}", 
+                    titre: "{{ livre.titre | escape }}", 
+                    auteur: "{{ livre.auteur | escape }}", 
+                    annee: "{{ livre.annee }}", 
+                    couverture: "{{ livre.couverture }}", 
+                    description: `{{ livre.description | escape }}` 
+                })'
+            >
+                <img src="{{ livre.couverture }}" alt="Book {{ loop.index }}" onerror="this.onerror=null; this.src='/images/default-book.png';">
+            </a>
+            <div class="text-box">
+                <p id="title-book"><strong>{{ livre.titre }}</strong></p>
+                <p>{{ livre.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

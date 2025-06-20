@@ -1,0 +1,25 @@
+{% extends "catalogue.njk" %}
+
+{% block content %}
+    {% for livre in livres %}
+        <div class="book-item">
+            <a href="{{ livre.lienDescription }}">
+                <img src="{{ livre.image }}" alt="Book {{ loop.index }}">
+            </a>
+            <div class="text-box">
+                <p id="title-book"><strong>{{ livre.titre }}</strong></p>
+                <p>{{ livre.description }}</p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block button %}
+    <div class="bottom-buttons">
+        <div class="btn-container">
+            <button onclick="viderPanier()" class="btn-commande">Vider Panier</button>
+            <button onclick="realiserEmprunt()" class="btn-commande">Passer Commande</button>
+            <button onclick="homeRedirect()" class="btn-recherche">Continuer Recherche</button>
+        </div>
+    </div>
+{% endblock %}

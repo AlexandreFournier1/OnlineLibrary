@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr" class="htmlProfilPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <script src="/js/style.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <title>Profil</title>
+</head>
+<body>
+    {% set showHomeLink = showHomeLink or true %}
+    {% set showLoginLink = false %}
+    {% set showPanierLink = false %}
+
+    {% include "partials/header.njk" %}
+
+    <main>
+        <div class="bloc">
+            <div class="blocProfil">
+                <section id="profil">
+                    <h2>Informations du profil</h2>
+                    <div class="pdpChanger" >
+                        <img id="previewPDP" src="{{ profileImage }}" alt="Photo de profil" title="Changer la photo">
+                        <input type="file" id="pdpUpload" accept="image/*" style="display: none;">
+                    </div>
+                    <p>Nom : {{ user.username }}</p>
+                    <p>Email : {{ user.email }}</p>
+                    <p>Date de création : {{ user.created_date }}</p>
+                </section>
+
+                <div class="buttonsProfil">
+                    <button id="editProfileButton" type="button">Modifier le profil</button>
+
+                    <div class="edit-profile-container">
+                        <div class="username-edit-form">
+                            <button type="button" class="close-btn">&times;</button>
+                            <input type="text" id="usernameEdit" placeholder="Nouveau nom d'utilisateur" />
+                            <button id="confirmEditButton" type="button">Confirmer</button>
+                        </div>
+                    </div>
+                    <button id="DisconnectButton" type="button">Déconnexion</button>
+                </div>
+            </div>
+
+            <div class="blocPanier">
+                <h2>Panier</h2>
+
+                {% if panierLivres.length > 0 %}
+                    {% for livre in panierLivres %}
+                    <div class="livre-panier">
+                        <div class="img-container">
+                        <img src="{{ livre.image }}" alt="Couverture de {{ livre.titre }}">
+                        </div>
+                        <div class="texte-container">
+                        <p class="titre">{{ livre.titre }}</p>
+                        <p class="auteur">{{ livre.auteur }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p>Votre panier est vide.</p>
+                {% endif %}
+            </div>
+
+
+            <div class="blocEmprunt">
+                <h2>Emprunt</h2>
+
+                {% if emprunts.length > 0 %}
+                    {% for emprunt in emprunts %}
+                    <div class="livre-emprunt">
+                        <div class="img-container">
+                        <img src="{{ emprunt.image }}" alt="Couverture de {{ emprunt.titre }}">
+                        </div>
+                        <div class="texte-container">
+                        <p class="titre">{{ emprunt.titre }}</p>
+                        <p class="auteur">{{ emprunt.auteur }}</p>
+                        <p class="retour" data-retour="{{ emprunt.dateRetour }}"></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p>Aucun emprunt en cours.</p>
+                {% endif %}
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

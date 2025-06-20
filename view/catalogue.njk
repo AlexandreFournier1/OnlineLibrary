@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" class="htmlCatalogue">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/book_style.css">
+    <script src="/js/script.js" defer></script>
+    <script src="/js/style.js" defer></script>
+    <title>Catalogue</title>
+</head>
+<body>
+
+    {% set showHomeLink = showHomeLink or true %}
+    {% set showLoginLink = showLoginLink or true %}
+    {% set showPanierLink = showPanierLink or true %}
+
+    {% include "partials/header.njk" %}
+
+    <main>
+        <div class="parentDiv">
+            {% block content %}{% endblock %}
+            {% block button %}{% endblock %}
+        </div>
+    </main>
+</body>
+</html>

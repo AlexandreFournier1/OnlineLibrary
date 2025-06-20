@@ -1,0 +1,727 @@
+/* Ici c'est le css pour la page principale, le login/register et le compte */
+/* ************************************************************************************************************************************ */
+/* ************************************************ Page Principale ******************************************************************* */
+/* ************************************************************************************************************************************ */
+
+header.ImgBiblio #panierIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    right: 110px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.ImgBiblio #panierIcon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.htmlMainPage {
+    scroll-behavior: smooth;
+}
+.htmlMainPage {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #865b47;
+    color: #F4EBD0;
+}
+
+.htmlMainPage header.ImgBiblio {
+    width: 100%;
+    height: 200px;
+    background: url("../img/BibMinecraft.jpeg") repeat-x;
+    background-size: auto 100%;
+    position: relative;
+}
+
+.htmlMainPage header.ImgBiblio img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.htmlMainPage header.ImgBiblio img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.htmlMainPage .title-Identifier {
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.htmlMainPage .title-Identifier h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.htmlMainPage .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.htmlMainPage .search-container input[type="search"] {
+    padding: 15px;
+    width: 550px;
+    height: 60px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color: #D2B48C;
+    color: #4B2E2E;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.htmlMainPage .search-container input[type="search"]:hover {
+    transform: scale(1.02);
+}
+
+.htmlMainPage .search-container input[type="search"]:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-color: #8B0000;
+}
+
+.htmlMainPage #search {
+    background-color: #8B0000;
+    color: #F4EBD0;
+    padding-top: 5px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.htmlMainPage #catalogue {
+    background-color: #c45420;
+    color: #F4EBD0;
+    padding-top: 5px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.htmlMainPage #search:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: #A52A2A;
+}
+
+.htmlMainPage #catalogue:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: #d46837;
+}
+
+.htmlMainPage #search:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.htmlMainPage #catalogue:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.htmlMainPage #search img , #catalogue img {
+    width: 40px;
+    height: 40px;
+}
+
+.htmlMainPage .books-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    gap: 40px;
+    margin-top: 100px;
+}
+.htmlMainPage .book-box {
+    background-color: #c2a381;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 48%;
+    text-align: center;
+    gap: 20px;
+}
+.htmlMainPage .book-box h2 {
+    color: #F4EBD0;
+    font-size: 1.8em;
+}
+.htmlMainPage .book-item {
+    background-color: #d2b48c;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.htmlMainPage .book-item img {
+    width: 150px;
+    height: 200px;
+    border-radius: 6px;
+    /* padding-top: 55px; */
+}
+
+.htmlMainPage .text-box {
+    background-color:#d2b48c;
+    padding: 10px;
+    max-width: 60%;
+}
+.htmlMainPage #title-book {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    padding-right: 100px;
+}
+
+.book-item {
+    background-color: #d2b48c;
+    padding: 5px;
+    padding-left: 25px;
+    margin: 3vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-item img {
+    width: 150px;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* ************************************************************************************************************************************ */
+/* *********************************************** Page Login/Register **************************************************************** */
+/* ************************************************************************************************************************************ */
+
+/* --- Global Styles --- */
+.htmlLoginRegister body {
+    background-color: #865b47;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.htmlLoginRegister main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* --- Header Styles --- */
+.htmlLoginRegister .ImgBiblio {
+    width: 100%;
+    height: 200px;
+    background: url("../img/BibMinecraft.jpeg") repeat-x;
+    background-size: auto 100%;
+}
+
+.htmlLoginRegister header.ImgBiblio img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.htmlLoginRegister header.ImgBiblio img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Section Styles --- */
+.htmlLoginRegister section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c49a6e;
+    color: #F4EBD0;
+    
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.htmlLoginRegister p {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+/* --- Button Styles --- */
+.htmlLoginRegister button .submit, #loginBtn, #registerBtn{
+    font-family: 'Georgia', serif;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    border: 3px outset #cfac7d;
+    background-color: #d2b48c;
+    color: #F4EBD0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.htmlLoginRegister button .submit:hover, #loginBtn:hover, #registerBtn:hover {
+    border: 3px inset #cea36a;
+    background-color: #cfac7d;
+}
+
+.htmlLoginRegister .submit {
+    font-family: 'Georgia', serif;
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    border: 3px outset #cfac7d;
+    background-color: #d2b48c;
+    color: #F4EBD0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.htmlLoginRegister .submit:hover {
+    border: 3px inset #cea36a;
+    background-color: #cfac7d;
+}
+
+/* --- Form Styles --- */
+.htmlLoginRegister .login-form, 
+.htmlLoginRegister .register-form {
+    display: none; 
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #d2b48c;
+    
+    margin-top: 10px;
+    transition: all 0.3s ease; 
+    width: 100%; 
+}
+
+/* --- Input Styles --- */
+.htmlLoginRegister .inputForm {
+    padding: 10px;
+    width: 92%;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color: #D2B48C;
+    color: #4B2E2E;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.htmlLoginRegister .inputForm:hover {
+    transform: scale(1.02);
+}
+
+.htmlLoginRegister .inputForm:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-color: #8B0000;
+}
+
+.htmlLoginRegister .inputForm::placeholder {
+    color: #F4EBD0;
+    font-style: italic;
+}
+
+/* --- Positionnement des boutons au-dessus du formulaire --- */
+.htmlLoginRegister .divLogin,
+.htmlLoginRegister .divRegister {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer les boutons au-dessus des formulaires */
+}
+
+.htmlLoginRegister .divLogin button,
+.htmlLoginRegister .divRegister button {
+    margin-bottom: 10px; /* Espacer le bouton du formulaire */
+}
+
+/* --- Form Active State Styles --- */
+.htmlLoginRegister .login-form.active, 
+.htmlLoginRegister .register-form.active {
+    display: flex; 
+    transform: scale(1.05); 
+    height: auto; 
+    padding-top: 20px; 
+    margin-top: 10px; 
+}
+
+/* --- Close Button Styles --- */
+.htmlLoginRegister .close-btn {
+    align-self: flex-end; /* Aligner la croix à droite */
+    font-size: 30px;
+    color: #F4EBD0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px; /* Espacer la croix du reste du formulaire */
+}
+
+.htmlLoginRegister .close-btn:hover {
+    color: #db622a;
+}
+
+/* --- Active State avec Transition --- */
+.htmlLoginRegister .login-form.active, 
+.htmlLoginRegister .register-form.active {
+    max-height: 300px; 
+    padding: 20px; 
+}
+
+/* ************************************************************************************************************************************ */
+/* *********************************************** Page Profil ************************************************************************ */
+/* ************************************************************************************************************************************ */
+        
+.htmlProfilPage {
+    scroll-behavior: smooth;
+    font-family: 'Georgia', serif;
+    background-color: #865b47;
+    color: #F4EBD0;
+}
+
+.htmlProfilPage header {
+    background-color: #4a3b2d;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.htmlProfilPage header a {
+    margin-right: auto;
+}
+
+.htmlProfilPage header h1 {
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.htmlProfilPage header img {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 2px solid #F4EBD0;
+}
+
+.htmlProfilPage .bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.htmlProfilPage .bloc > div {
+    padding: 10px;
+    border: 1px solid #F4EBD0;  
+    border-radius: 5px;
+    background-color: #4a3b2d;
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    min-height: 80vh; /* Ensure each div stretches to the full height of the page */
+}
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+
+/* --- Form Styles --- */
+
+.htmlProfilPage .pdpChanger {
+    display: flex;
+    justify-content: center;
+}
+
+.htmlProfilPage .edit-profile-container {
+    display: none; /* Par défaut, caché */
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: #865b47;
+    border-radius: 10px;
+    width: 75%;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    position: relative; /* Permet de positionner le bouton de fermeture */
+}
+
+/* --- Form Active State Styles --- */
+.htmlProfilPage .edit-profile-container.active {
+    display: flex; /* Affiché lorsque la classe active est ajoutée */
+    transform: scale(1.05); /* Effet d'agrandissement lors de l'activation */
+    height: auto;
+    padding-top: 20px;
+    margin-top: 10px;
+}   
+
+/* --- Close Button Styles --- */
+.htmlProfilPage .close-btn {
+    align-self: flex-end; /* Aligner la croix à droite */
+    font-size: 30px;
+    color: #F4EBD0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 15px; /* Espacer la croix du reste du formulaire */
+}
+
+.htmlProfilPage .close-btn:hover {
+    color: #db622a;
+}
+
+/* --- Input Styles --- */
+.htmlProfilPage .username-edit-form input {
+    padding: 8px;
+    width: 50%; /* Réduit la largeur de l'input */
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color: #956c5a;
+    color: #4B2E2E;
+    font-size: 1em; /* Réduit la taille de la police de l'input */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 15px; /* Espacement entre l'input et le bouton de confirmation */
+}
+
+.htmlProfilPage .username-edit-form input:hover {
+    transform: scale(1.02);
+}
+
+.htmlProfilPage .username-edit-form input:focus {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border-color: #8B0000;
+}
+
+.htmlProfilPage .username-edit-form input::placeholder {
+    color: #F4EBD0;
+    font-style: italic;
+}
+
+.htmlProfilPage #confirmEditButton:hover {
+    border: 3px inset #cea36a;
+    background-color: #cfac7d;
+}
+
+/* --- Container for Username Edit Form --- */
+.htmlProfilPage .username-edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.htmlProfilPage #previewPDP {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+
+
+@media (max-width: 768px) {
+    .htmlProfilPage .bloc > div {
+        flex: 1 1 calc(50% - 20px); /* Adjust to two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .htmlProfilPage .bloc > div {
+        flex: 1 1 100%; /* Adjust to one column on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .htmlProfilPage .bloc > div {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .htmlProfilPage .bloc > div {
+        flex: 1 1 100%;
+    }
+
+    .htmlProfilPage header {
+        flex-direction: column;
+    }
+
+    .htmlProfilPage header h1 {
+        margin: 10px 0;
+    }
+}
+
+.htmlProfilPage h2 {
+    text-align: center;
+    color: #F4EBD0;
+    padding-bottom: 50px;
+}
+
+.htmlProfilPage .bloc p {
+    color: #F4EBD0;
+    padding: 20px;
+}
+
+/* Nouveau pour contenir plusieurs boutons bien disposés */
+.htmlProfilPage .buttonsProfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* espace entre les deux boutons */
+    margin-top: 20px;
+}
+
+/* Style des boutons dans buttonsProfil */
+.htmlProfilPage .buttonsProfil button:not(.close-btn) {
+    background-color: #F4EBD0;
+    color: #4a3b2d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px; /* largeur identique pour tous les boutons */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.htmlProfilPage .buttonsProfil button:not(.close-btn):hover {
+    background-color: #d46837;
+    color: #F4EBD0;
+    transition: background-color 1s ease, color 0.3s ease;
+}
+
+.htmlProfilPage .buttonsProfil button:not(.close-btn):active {
+    background-color: #8c4523;
+    color: #F4EBD0;
+    transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+
+.htmlProfilPage .blocProfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* espace entre contenu et boutons */
+    position: relative;
+    min-height: 80vh; /* même hauteur que les autres blocs */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Bloc avec défilement pour Panier et Emprunt */
+.htmlProfilPage .blocPanier,
+.htmlProfilPage .blocEmprunt {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+/* Conteneur général pour un livre */
+.htmlProfilPage .livre-panier,
+.htmlProfilPage .livre-emprunt {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Image du livre */
+.htmlProfilPage .img-container {
+  flex: 0 0 80px;
+}
+
+.htmlProfilPage .img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Texte à droite de l'image */
+.htmlProfilPage .texte-container {
+  flex: 1;
+}
+
+.htmlProfilPage .texte-container .titre {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.2rem;
+}
+
+.htmlProfilPage .texte-container .auteur {
+  color: #666;
+}
+
+.htmlProfilPage .texte-container .retour {
+  color: #a00;
+  font-size: 0.9rem;
+}

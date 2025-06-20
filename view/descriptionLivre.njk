@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr" class="htmlDescriptionLivre">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/book_style.css">
+    <script src="/js/script.js" defer></script>
+    <title>{{ livre.titre }}</title>
+</head>
+<body>
+    {% set showHomeLink = showHomeLink or true %}
+    {% set showLoginLink = showLoginLink or true %}
+    {% set showPanierLink = showPanierLink or true %}
+
+    {% include "partials/header.njk" %}
+
+    <main>
+        <div class="book-description-container">
+            <div class="left-box">
+                <img src="{{ livre.image or '/img/default-book.png' }}" alt="Image du livre {{ livre.titre }}" onerror="this.onerror=null;">
+                <ul>
+                    <li><strong>Auteur :</strong> {{ livre.auteur }}</li>
+                    <li><strong>Genre :</strong> {{ livre.genre }}</li>
+                    <li><strong>Thèmes :</strong> {{ livre.themes }}</li>
+                    <li><strong>Date de sortie :</strong> {{ livre.dateSortie }}</li>
+                </ul>
+                <button 
+                    class="order-button" 
+                    data-isbn="{{ livre.isbn }}" 
+                    data-titre="{{ livre.titre }}" 
+                    data-auteur="{{ livre.auteur }}">
+                    Commander
+                </button>
+
+            </div>
+            <div class="right-box">
+                <div class="resume">
+                    <h2 id="title-book">{{ livre.titre }}</h2>
+                    <p>{{ livre.description | safe }}</p>
+                </div>
+            </div>            
+        </div>
+    </main>
+</body>
+</html>

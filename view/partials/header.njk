@@ -1,0 +1,20 @@
+<header class="ImgBiblio">
+    {% if showHomeLink %}
+        <a href="/">
+            <img src="/img/maison.jpg" title="Home" id="homeIcon">
+        </a>
+    {% endif %}
+
+    {% if showLoginLink %}
+        <a href="/compte">
+            <!-- Affiche l'image de profil de l'utilisateur ou l'image par défaut -->
+            <img src="{{ profileImage }}" title="Connect" id="userIcon">
+        </a>
+    {% endif %}
+
+    {% if showPanierLink %}
+        <a href="/panier">
+            <img src="/img/caddie.png" title="Panier" id="panierIcon">
+        </a>
+    {% endif %}
+</header>

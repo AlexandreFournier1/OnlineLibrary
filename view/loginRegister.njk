@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr" class="htmlLoginRegister">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main_style.css">
+    <script src="/js/style.js" defer></script>
+    <script src="/js/script.js" defer></script>
+    <title>Login/Register</title>
+</head>
+<body class="bodyLoginRegister">
+    {% set showHomeLink = true %}
+    {% set showLoginLink = false %}
+    {% set showPanierLink = false %}
+
+    {% include "partials/header.njk" %}
+
+    <main>
+        <section class="htmlLoginRegister">
+            <div class="divLogin">
+                <button type="button" id="loginBtn">LOGIN</button>
+                <form id="loginForm" class="login-form">
+                    <button type="button" class="close-btn">&times;</button>
+                    <input class="inputForm" type="text" id="usernameLogin" placeholder="Username" required minlength="3" maxlength="20" />
+                    <input class="inputForm" type="password" id="passwordLogin" placeholder="Password" required minlength="8" />
+                    <button type="submit" id="submitLoginBtn" class="submit">Submit</button>
+                </form>
+            </div>
+            <p>--- OR ---</p>
+            <div class="divRegister">
+                <button type="button" id="registerBtn">REGISTER</button>
+                <form id="registerForm" class="register-form">
+                    <button type="button" class="close-btn">&times;</button>
+                    <input class="inputForm" type="text" id="usernameRegister" placeholder="Username" required minlength="3" maxlength="20"/>
+                    <input class="inputForm" type="email" id="emailRegister" placeholder="Email" required />
+                    <input class="inputForm" type="password" id="passwordRegister" placeholder="Password" required minlength="8"/>
+                    <button type="submit" id="submitRegisterBtn" class="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

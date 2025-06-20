@@ -1,0 +1,296 @@
+/* Ici c'est le css pour le catalogue, le scroll Livre et le panier*/
+
+/* ************************************************************************************************************************************ */
+/* ************************************************* Page Catalogue ******************************************************************* */
+/* ************************************************************************************************************************************ */
+
+/* --- Global Styles --- */
+.htmlCatalogue body,
+.htmlDescriptionLivre body {
+    background-color: #865b47;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* --- Header Styles --- */
+:not(.htmlProfilPage) .ImgBiblio {
+    width: 100%;
+    height: 200px;
+    background: url("../img/BibMinecraft.jpeg") repeat-x;
+    background-size: auto 100%;
+}
+
+header.ImgBiblio #userIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.ImgBiblio #homeIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.ImgBiblio #panierIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: absolute;
+    right: 110px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.ImgBiblio #homeIcon:hover,
+header.ImgBiblio #userIcon:hover,
+header.ImgBiblio #panierIcon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.parentDiv {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+    
+#div1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+#div2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#div3 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}  
+
+.book-item {
+    background-color: #d2b48c;
+    padding: 5px;
+    padding-left: 25px;
+    margin: 3vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-item img {
+    width: 150px;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.book-item img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.text-box {
+    padding: 5px;
+    max-width: 88%;
+    color: #f1e4bd;
+    border-radius: 6px;
+}
+
+#title-book {
+    color: #f1e4bd;
+    font-weight: bold;
+    text-align: left;
+    font-size: 2em;
+    padding-right: 10%;
+}
+
+/* ************************************************************************************************************************************ */
+/* ********************************************* Page Description Livre *************************************************************** */
+/* ************************************************************************************************************************************ */
+
+.htmlDescriptionLivre .book-description-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px;
+    margin-left: 0;
+}
+
+.htmlDescriptionLivre .left-box {
+    background-color: #d2b48c;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    flex-shrink: 0;
+    margin-left: 5%;
+}
+
+.htmlDescriptionLivre .left-box img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.htmlDescriptionLivre .left-box ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    color: #4b2e1f;
+}
+
+.htmlDescriptionLivre .right-box {
+    flex: 1;
+    height: calc(100vh - 240px); /* adapt height based on header and spacing */
+    display: flex;
+}
+
+.htmlDescriptionLivre .resume {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #d2b48c;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    color: #f1e4bd;
+    overflow-y: auto;
+}
+
+.htmlDescriptionLivre .resume h2 {
+    font-size: 32px;
+    color: #5a2e1d;
+    margin-bottom: 20px;
+}
+
+.htmlDescriptionLivre .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.htmlDescriptionLivre .order-button {
+    font-family: 'Georgia', serif;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+    border: 3px outset #cea36a;
+    background-color: #cfac7d;
+    color: #F4EBD0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.htmlDescriptionLivre .order-button:hover {
+    border: 3px inset #d3a263;
+    background-color: #d1a871;
+}
+
+/* ************************************************************************************************************************************ */
+/* ************************************************** Page Panier ********************************************************************* */
+/* ************************************************************************************************************************************ */
+
+/* --- Global Styles --- */
+.htmlPanier body {
+    background-color: #865b47;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.bottom-buttons {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between; /* Distribution des éléments entre les bords */
+    padding: 0 30px;
+}
+
+.btn-commande, 
+.btn-recherche {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    font-size: x-large;
+    border: 3px outset #d3a263;;
+    background-color: #d1a871;
+    color: #F4EBD0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 20px;
+}
+
+.btn-commande:hover, 
+.btn-recherche:hover {
+    border: 3px inset #d39d57;
+    background-color: #d1a263;
+}
+
+
+.htmlChoixTheme body {
+    background-color: #865b47;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Conteneur qui gère le centrage sous le header */
+.htmlChoixTheme main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+/* Contient les liens des thèmes */
+.htmlChoixTheme .parentDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.htmlChoixTheme .themeCard {
+    text-decoration: none;
+    background-color: #8B0000;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.htmlChoixTheme .themeCard:hover {
+    background-color: #B22222;
+    transform: scale(1.05);
+}

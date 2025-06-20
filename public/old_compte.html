@@ -1,0 +1,39 @@
+<html lang="fr" class="htmlProfilPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/main_style.css">
+    <title>Profil</title>
+    
+</head>
+<body>
+    <header>
+        <a href="/" id="homeLink">
+            <img src="./img/maison.jpg" title="Home" id="homeIcon">
+        </a>
+        <h1>Profil</h1>
+    </header>
+    <main>
+        <div class="bloc">
+            <div class="blocProfil">
+                <section id="profil">
+                    <h2>Informations du profil</h2>
+                    <p>Nom : {{ user.name }}</p>
+                    <p>Email : {{ user.email }}</p>
+                    <p>Date de création : {{ user.created_date }}</p>
+                    <button id="editProfileButton" type="submit">Modifier le profil</button>
+                </section>
+            </div>
+
+            <div class="blocPanier">
+                <h2>Panier</h2>
+            </div>
+
+            <div class="blocEmprunt">
+                <h2>Emprunt</h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
